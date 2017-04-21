@@ -30,6 +30,7 @@ gem 'cucumber-rails-training-wheels'
 gem 'haml'
 gem 'haml-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'devise'
 
 
 

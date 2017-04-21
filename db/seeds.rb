@@ -4,4 +4,10 @@
 # Examples:
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Exam.create(name: "Exam1", description: "Easy Exam")
+Exam.create(name: "Exam2", description: "Easy Exam")
+Exam.create(name: "Exam3", description: "Easy Exam")
+Exam.create(name: "Exam4", description: "Easy Exam")
+Exam.create(name: "Exam5", description: "Easy Exam")
