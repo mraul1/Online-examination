@@ -33,25 +33,27 @@ class ExamsController < ApplicationController
   # PATCH/PUT /exams/1
   # PATCH/PUT /exams/1.json
   def update
-    respond_to do |format|
-      if @exam.update(exam_params)
-        format.html { redirect_to @exam, notice: 'Exam was successfully updated.' }
-        format.json { render :show, status: :ok, location: @exam }
-      else
-        format.html { render :edit }
-        format.json { render json: @exam.errors, status: :unprocessable_entity }
-      end
-    end
+      #respond_to do |format|
+     @exam.update(exam_params) #if
+     # flash[:notice] = "#{@exam.name} was successfully created."
+     redirect_to(exams_path)
+      #   format.html { redirect_to @exam, notice: 'Exam was successfully updated.' }
+      #   format.json { render :show, status: :ok, location: @exam }
+      # else
+      #   format.html { render :edit }
+      #   format.json { render json: @exam.errors, status: :unprocessable_entity }
+      # end
+    # end
   end
 
   # DELETE /exams/1
   # DELETE /exams/1.json
+ 
   def destroy
+    @exam = Exam.find(params[:id])
     @exam.destroy
-    respond_to do |format|
-      format.html { redirect_to exams_path, notice: 'Exam was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    flash[:notice] = "Exam '#{@exam.name}' deleted."
+    redirect_to exam_path
   end
 
   private
