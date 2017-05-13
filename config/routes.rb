@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   #root 'exams#index'
   
   resources :exams
+  resources :questions
+  post '/exams/submit' => 'exams#submit_exam', as: :exam_submit
+  get '/show_results' => 'exams#show_result', as: :show_result
   root 'exams#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
